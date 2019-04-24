@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Shipw/OneDrive/Documents/ExprInter/ExprInter/Expr.cpp
+iostream
+-
+Expr.hpp
+C:/Users/Shipw/OneDrive/Documents/ExprInter/ExprInter/Expr.hpp
+SymTab.hpp
+C:/Users/Shipw/OneDrive/Documents/ExprInter/ExprInter/SymTab.hpp
+
+C:/Users/Shipw/OneDrive/Documents/ExprInter/ExprInter/Expr.hpp
+Token.hpp
+C:/Users/Shipw/OneDrive/Documents/ExprInter/ExprInter/Token.hpp
+SymTab.hpp
+C:/Users/Shipw/OneDrive/Documents/ExprInter/ExprInter/SymTab.hpp
+
+C:/Users/Shipw/OneDrive/Documents/ExprInter/ExprInter/SymTab.hpp
+string
+-
+map
+-
+
+C:/Users/Shipw/OneDrive/Documents/ExprInter/ExprInter/Token.hpp
+string
+-
+

@@ -1,0 +1,15 @@
+
+a = "Hello"
+b = " World"                #This Should be ignored
+c = 10
+d = a + b
+k = 7
+
+for x in range(10):
+    if not x > 3:
+            print "x is ", x, " b is ", b, " and a + b is ", a + b
+
+
+
+
+print "finished program ", a
