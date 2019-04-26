@@ -217,3 +217,26 @@ TypeDescriptor* StringNode::evaluate(SymTab &symTab) {
         std::cout << "StringNode::evaluate: returning " << dynamic_cast<StringDescriptor*>(symTab.getValueFor(token().getName()))->value << std::endl;
     return dynamic_cast<StringDescriptor*>(symTab.getValueFor(token().getName()));
 }
+
+//Array Node
+ArrayNode::ArrayNode(Token token) : ExprNode{token}{}
+
+void ArrayNode::print() {
+
+}
+
+TypeDescriptor* ArrayNode::evaluate(SymTab &symTab) {
+
+}
+
+void ArrayNode::push(Token token) {
+
+}
+
+void ArrayNode::pop() {
+
+}
+
+int  ArrayNode::size() {
+
+}

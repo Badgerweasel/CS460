@@ -87,6 +87,9 @@ public:
     ArrayNode(Token token);
     virtual void print();
     virtual  TypeDescriptor* evaluate(SymTab &symTab);
+    void push(Token token);
+    void pop();
+    int size();
 };
 
 #endif //EXPRINTER_ARITHEXPR_HPP
