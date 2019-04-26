@@ -45,16 +45,6 @@ struct ArrayDescriptor: TypeDescriptor{
     ArrayDescriptor(types descType) : TypeDescriptor(descType) {}
     std::vector<int> valueInt;
     std::vector<std::string > valueString;
-
-    void switchDataType(types descType){
-        if(_type == TypeDescriptor::INTEGER){
-            valueInt.clear();
-        }
-        else{
-            valueString.clear();
-        }
-        _type = descType;
-    }
 };
 
 class SymTab {

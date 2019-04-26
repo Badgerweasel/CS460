@@ -82,4 +82,11 @@ public:
     virtual TypeDescriptor* evaluate(SymTab & symTab);
 };
 
+class ArrayNode: public ExprNode {
+public:
+    ArrayNode(Token token);
+    virtual void print();
+    virtual  TypeDescriptor* evaluate(SymTab &symTab);
+};
+
 #endif //EXPRINTER_ARITHEXPR_HPP
