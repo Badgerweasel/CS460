@@ -222,11 +222,30 @@ TypeDescriptor* StringNode::evaluate(SymTab &symTab) {
 ArrayNode::ArrayNode(Token token) : ExprNode{token}{}
 
 void ArrayNode::print() {
-
+    token().print();
+    std::cout << "[]" << std::endl;
 }
 
 TypeDescriptor* ArrayNode::evaluate(SymTab &symTab) {
+    if( ! symTab.isDefined(token().getName())) {
+        if(debug)
+            std::cout << "ArrayNode::evaluate: returning " << token().getString() << std::endl;
+        ArrayDescriptor *temp;
+        if(token().isWholeNumber()){
+            temp = new ArrayDescriptor(TypeDescriptor::INTEGER);
+            temp->valueInt.push_back(token().getWholeNumber());
+        }
+        else {
+            temp = new ArrayDescriptor(TypeDescriptor::STRING);
+            temp->valueString.push_back(token().getString());
+        }
 
+        return temp;
+
+    }
+    if(debug)
+        std::cout << "StringNode::evaluate: returning " << dynamic_cast<StringDescriptor*>(symTab.getValueFor(token().getName()))->value << std::endl;
+    return symTab.getValueFor(token().getName());
 }
 
 void ArrayNode::push(Token token) {
